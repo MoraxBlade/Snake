@@ -13,19 +13,19 @@ BarrierSnake::BarrierSnake() {
     moveB = newimage();
 
     //蛇
-    getimage(headUp, "D:/学习/作业/软工实训/贪吃蛇/image/normalHead_up.png");
-    getimage(headDown, "D:/学习/作业/软工实训/贪吃蛇/image/normalHead_down.png");
-    getimage(headLeft, "D:/学习/作业/软工实训/贪吃蛇/image/normalHead_left.png");
-    getimage(headRight, "D:/学习/作业/软工实训/贪吃蛇/image/normalHead_right.png");
-    getimage(bodyImg, "D:/学习/作业/软工实训/贪吃蛇/image/normalBody.png");
+    getimage(headUp, "./image/normalHead_up.png");
+    getimage(headDown, "./image/normalHead_down.png");
+    getimage(headLeft, "./image/normalHead_left.png");
+    getimage(headRight, "./image/normalHead_right.png");
+    getimage(bodyImg, "./image/normalBody.png");
 
     //食物背景
-    getimage(foodImg, "D:/学习/作业/软工实训/贪吃蛇/image/food_normal.png");
-    getimage(Background, "D:/学习/作业/软工实训/贪吃蛇/image/background.jpg");
+    getimage(foodImg, "./image/food_normal.png");
+    getimage(Background, "./image/background.jpg");
 
     //障碍物
-    getimage(staticB, "D:/学习/作业/软工实训/贪吃蛇/image/Barrier_static.png");
-    getimage(moveB, "D:/学习/作业/软工实训/贪吃蛇/image/Barrier_move.png");
+    getimage(staticB, "./image/Barrier_static.png");
+    getimage(moveB, "./image/Barrier_move.png");
 
 }
 

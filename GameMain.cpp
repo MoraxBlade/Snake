@@ -30,10 +30,10 @@ int main() {
             bool needRedraw = menu.handleInput(running);
             if (needRedraw) {
                 menu.draw(0);
-                Sleep(10);
+                Sleep(1);
             }
 
-            // 检测模式选择菜单的确认（进入对应游戏模式）
+            // 检测模式选择菜单的确认
             if (menu.currentState == Menu::MODE_SELECTION) {
                 if (kbhit() && getch() == 13) {  // 按Enter确认选择
                     switch (menu.selectedBtn) {
@@ -67,7 +67,7 @@ int main() {
                 // 显示死亡信息和分数
                 settextcolor(RED);
                 setfont(-60, 0, "微软雅黑");
-                outtextxy(500, 400, "游戏结束！按ESC返回菜单");
+                outtextxy(500, 400, "游戏结束！按ESC后回车返回菜单");
 
                 // 显示最终分数
                 settextcolor(RED);
@@ -85,7 +85,7 @@ int main() {
                         menu.draw(0);
                         break;
                     }
-                    Sleep(10);
+                    Sleep(5);
                 }
             }
         }
@@ -103,7 +103,7 @@ int main() {
                 // 显示死亡信息和分数
                 settextcolor(RED);
                 setfont(-60, 0, "微软雅黑");
-                outtextxy(500, 400, "游戏结束！按ESC返回菜单");
+                outtextxy(500, 400, "游戏结束！按ESC后回车返回菜单");
 
                 // 显示最终分数
                 settextcolor(RED);
@@ -121,7 +121,7 @@ int main() {
                         menu.draw(0);
                         break;
                     }
-                    Sleep(10);
+                    Sleep(5);
                 }
             }
 
@@ -139,7 +139,7 @@ int main() {
                 // 显示死亡信息和分数
                 settextcolor(RED);
                 setfont(-60, 0, "微软雅黑");
-                outtextxy(500, 400, "游戏结束！按ESC返回菜单");
+                outtextxy(500, 400, "游戏结束！按ESC后回车返回菜单");
 
                 // 显示最终分数
                 settextcolor(RED);
@@ -157,7 +157,7 @@ int main() {
                         menu.draw(0);
                         break;
                     }
-                    Sleep(10);
+                    Sleep(5);
                 }
             }
 

@@ -43,55 +43,55 @@ Menu::Menu() :selectedBtn(0), showHelp(false), currentState(MAIN_MENU) {
 	menu = newimage();
 	GuideImg = newimage();
 	ModeMenu = newimage();
-	getimage(menu, "D:/学习/作业/软工实训/贪吃蛇/image/menu.jpg");//菜单
-	getimage(GuideImg, "D:/学习/作业/软工实训/贪吃蛇/image/GuideImg.jpg");//帮助
-	getimage(ModeMenu, "D:/学习/作业/软工实训/贪吃蛇/image/ModeMenu.jpg");//模式选择
+	getimage(menu, "./image/menu.jpg");//菜单
+	getimage(GuideImg, "./image/GuideImg.jpg");//帮助
+	getimage(ModeMenu, "./image/ModeMenu.jpg");//模式选择
 
 	//模式选择按钮
 	PIMAGE GameMode_unchoose = newimage();
-	getimage(GameMode_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/GameMode_unchoose.png");
+	getimage(GameMode_unchoose, "./image/GameMode_unchoose.png");
 	PIMAGE GameMode_choose = newimage();
-	getimage(GameMode_choose, "D:/学习/作业/软工实训/贪吃蛇/image/GameMode_choose.png");
+	getimage(GameMode_choose, "./image/GameMode_choose.png");
 	ImageButton GameMode (594.5, 267.5, GameMode_unchoose, GameMode_choose);
 	mainButtons.push_back(GameMode);
 	
 	// 操作手册按钮
 	PIMAGE Guide_unchoose = newimage();
-	getimage(Guide_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/Guide_unchoose.png");
+	getimage(Guide_unchoose, "./image/Guide_unchoose.png");
 	PIMAGE Guide_choose = newimage();
-	getimage(Guide_choose, "D:/学习/作业/软工实训/贪吃蛇/image/Guide_choose.png");
+	getimage(Guide_choose, "./image/Guide_choose.png");
 	ImageButton Guide(594.5, 421.5, Guide_unchoose, Guide_choose);
 	mainButtons.push_back(Guide);
 
 	// 关闭按钮
 	PIMAGE Close_unchoose = newimage();
-	getimage(Close_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/close_unchoose.png");
+	getimage(Close_unchoose, "./image/close_unchoose.png");
 	PIMAGE Close_choose = newimage();
-	getimage(Close_choose, "D:/学习/作业/软工实训/贪吃蛇/image/close_choose.png");
+	getimage(Close_choose, "./image/close_choose.png");
 	ImageButton Close(594.5, 575.5, Close_unchoose, Close_choose);
 	mainButtons.push_back(Close);
 
 	// 普通模式按钮
 	PIMAGE Normal_unchoose = newimage();
-	getimage(Normal_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/normal_unchoose.png");
+	getimage(Normal_unchoose, "./image/normal_unchoose.png");
 	PIMAGE Normal_choose = newimage();
-	getimage(Normal_choose, "D:/学习/作业/软工实训/贪吃蛇/image/normal_choose.png");
+	getimage(Normal_choose, "./image/normal_choose.png");
 	ImageButton Normal(594.5, 267.5, Normal_unchoose, Normal_choose);
 	modeButtons.push_back(Normal);
 
 	// 障碍模式按钮
 	PIMAGE Barrier_unchoose = newimage();
-	getimage(Barrier_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/barrier_unchoose.png");
+	getimage(Barrier_unchoose, "./image/barrier_unchoose.png");
 	PIMAGE Barrier_choose = newimage();
-	getimage(Barrier_choose, "D:/学习/作业/软工实训/贪吃蛇/image/barrier_choose.png");
+	getimage(Barrier_choose, "./image/barrier_choose.png");
 	ImageButton Barrier(594.5, 421.5, Barrier_unchoose, Barrier_choose);
 	modeButtons.push_back(Barrier);
 
 	// 五行模式按钮
 	PIMAGE Elements_unchoose = newimage();
-	getimage(Elements_unchoose, "D:/学习/作业/软工实训/贪吃蛇/image/elements_unchoose.png");
+	getimage(Elements_unchoose, "./image/elements_unchoose.png");
 	PIMAGE Elements_choose = newimage();
-	getimage(Elements_choose, "D:/学习/作业/软工实训/贪吃蛇/image/elements_choose.png");
+	getimage(Elements_choose, "./image/elements_choose.png");
 	ImageButton Elements(594.5, 575.5, Elements_unchoose, Elements_choose);
 	modeButtons.push_back(Elements);
 

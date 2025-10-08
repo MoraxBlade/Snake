@@ -10,14 +10,17 @@ ElementSnake::ElementSnake():BarrierSnake(){
     eleFoodImgs[5] = newimage(); // DIRT
 
     // 加载元素食物图像
-    getimage(eleFoodImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/food_normal.png");
-    getimage(eleFoodImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/food_gold.png");
-    getimage(eleFoodImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/food_wood.png");
-    getimage(eleFoodImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/food_water.png");
-    getimage(eleFoodImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/food_fire.png");
-    getimage(eleFoodImgs[5], "D:/学习/作业/软工实训/贪吃蛇/image/food_dirt.png");
+    getimage(eleFoodImgs[0], "./image/food_normal.png");
+    getimage(eleFoodImgs[1], "./image/food_gold.png");
+    getimage(eleFoodImgs[2], "./image/food_wood.png");
+    getimage(eleFoodImgs[3], "./image/food_water.png");
+    getimage(eleFoodImgs[4], "./image/food_fire.png");
+    getimage(eleFoodImgs[5], "./image/food_dirt.png");
+
     //要把普通类也存入
     EleSnake[Type::NORMAL] = { headUp,headDown,headLeft,headRight,bodyImg };
+
+
     // 初始化金元素蛇图像（0:上, 1:下, 2:左, 3:右, 4:身体）
     vector<PIMAGE> goldImgs(5);
     goldImgs[0] = newimage(); // 头朝上
@@ -25,11 +28,11 @@ ElementSnake::ElementSnake():BarrierSnake(){
     goldImgs[2] = newimage(); // 头朝左
     goldImgs[3] = newimage(); // 头朝右
     goldImgs[4] = newimage(); // 身体
-    getimage(goldImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/goldHead_up.png");
-    getimage(goldImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/goldHead_down.png");
-    getimage(goldImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/goldHead_left.png");
-    getimage(goldImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/goldHead_right.png");
-    getimage(goldImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/goldBody.png");
+    getimage(goldImgs[0], "./image/goldHead_up.png");
+    getimage(goldImgs[1], "./image/goldHead_down.png");
+    getimage(goldImgs[2], "./image/goldHead_left.png");
+    getimage(goldImgs[3], "./image/goldHead_right.png");
+    getimage(goldImgs[4], "./image/goldBody.png");
     EleSnake[Type::GOLD] = goldImgs;
 
     // 初始化木元素蛇图像
@@ -39,11 +42,11 @@ ElementSnake::ElementSnake():BarrierSnake(){
     woodImgs[2] = newimage();
     woodImgs[3] = newimage();
     woodImgs[4] = newimage();
-    getimage(woodImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/woodHead_up.png");
-    getimage(woodImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/woodHead_down.png");
-    getimage(woodImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/woodHead_left.png");
-    getimage(woodImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/woodHead_right.png");
-    getimage(woodImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/woodBody.png");
+    getimage(woodImgs[0], "./image/woodHead_up.png");
+    getimage(woodImgs[1], "./image/woodHead_down.png");
+    getimage(woodImgs[2], "./image/woodHead_left.png");
+    getimage(woodImgs[3], "./image/woodHead_right.png");
+    getimage(woodImgs[4], "./image/woodBody.png");
     EleSnake[Type::WOOD] = woodImgs;
 
     // 初始化水元素蛇图像
@@ -53,11 +56,11 @@ ElementSnake::ElementSnake():BarrierSnake(){
     waterImgs[2] = newimage();
     waterImgs[3] = newimage();
     waterImgs[4] = newimage();
-    getimage(waterImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/waterHead_up.png");
-    getimage(waterImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/waterHead_down.png");
-    getimage(waterImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/waterHead_left.png");
-    getimage(waterImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/waterHead_right.png");
-    getimage(waterImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/waterBody.png");
+    getimage(waterImgs[0], "./image/waterHead_up.png");
+    getimage(waterImgs[1], "./image/waterHead_down.png");
+    getimage(waterImgs[2], "./image/waterHead_left.png");
+    getimage(waterImgs[3], "./image/waterHead_right.png");
+    getimage(waterImgs[4], "./image/waterBody.png");
     EleSnake[Type::WATER] = waterImgs;
 
     // 初始化火元素蛇图像
@@ -67,11 +70,11 @@ ElementSnake::ElementSnake():BarrierSnake(){
     fireImgs[2] = newimage();
     fireImgs[3] = newimage();
     fireImgs[4] = newimage();
-    getimage(fireImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/fireHead_up.png");
-    getimage(fireImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/fireHead_down.png");
-    getimage(fireImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/fireHead_left.png");
-    getimage(fireImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/fireHead_right.png");
-    getimage(fireImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/fireBody.png");
+    getimage(fireImgs[0], "./image/fireHead_up.png");
+    getimage(fireImgs[1], "./image/fireHead_down.png");
+    getimage(fireImgs[2], "./image/fireHead_left.png");
+    getimage(fireImgs[3], "./image/fireHead_right.png");
+    getimage(fireImgs[4], "./image/fireBody.png");
     EleSnake[Type::FIRE] = fireImgs;
 
     // 初始化土元素蛇图像
@@ -81,11 +84,11 @@ ElementSnake::ElementSnake():BarrierSnake(){
     dirtImgs[2] = newimage();
     dirtImgs[3] = newimage();
     dirtImgs[4] = newimage();
-    getimage(dirtImgs[0], "D:/学习/作业/软工实训/贪吃蛇/image/dirtHead_up.png");
-    getimage(dirtImgs[1], "D:/学习/作业/软工实训/贪吃蛇/image/dirtHead_down.png");
-    getimage(dirtImgs[2], "D:/学习/作业/软工实训/贪吃蛇/image/dirtHead_left.png");
-    getimage(dirtImgs[3], "D:/学习/作业/软工实训/贪吃蛇/image/dirtHead_right.png");
-    getimage(dirtImgs[4], "D:/学习/作业/软工实训/贪吃蛇/image/dirtBody.png");
+    getimage(dirtImgs[0], "./image/dirtHead_up.png");
+    getimage(dirtImgs[1], "./image/dirtHead_down.png");
+    getimage(dirtImgs[2], "./image/dirtHead_left.png");
+    getimage(dirtImgs[3], "./image/dirtHead_right.png");
+    getimage(dirtImgs[4], "./image/dirtBody.png");
     EleSnake[Type::DIRT] = dirtImgs;
 }
 
