@@ -145,7 +145,6 @@ bool Menu::handleInput(bool& running) {
 					case 1: cout << "选择障碍模式" << endl; break;
 					case 2: cout << "选择五行模式" << endl; break;
 					}
-					enterMainMenu(); // 返回主菜单，需要重绘
 					needRedraw = true;
 				}
 			}

@@ -170,7 +170,7 @@ void ElementSnake::handleElementEffect(Type foodType, bool isSpeeding) {
     }
     // 元素相克关系，分数减少更多
     else if (isRestraining(SnakeType, foodType)) {
-        score = max(0, score - (isSpeeding ? 400 : 200));
+        score = max(0, score - (isSpeeding ? 200 : 100));
         if (body.size() > 3) {
             body.pop_back();
         }

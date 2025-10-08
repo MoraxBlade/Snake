@@ -5,6 +5,7 @@
 #include <ctime>
 #include <cmath>
 #include "Common.h"
+#include "Menu.h"
 using namespace std;
 
 
@@ -23,6 +24,7 @@ protected:
     PIMAGE bodyImg;              // 蛇身图片
     PIMAGE foodImg;              // 食物图片
     PIMAGE Background;                // 背景图片
+    PIMAGE EleBackground;        //元素模式背景图片
     int score;                   // 当前分数
     int highScore;               // 最高分记录
     const int nodeSize = 30;     // 蛇头/蛇身/食物的尺寸（30x30像素）

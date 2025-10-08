@@ -23,6 +23,7 @@ BarrierSnake::BarrierSnake() {
     getimage(foodImg, "./image/food_normal.png");
     getimage(Background, "./image/background.jpg");
 
+
     //’œ∞≠ŒÔ
     getimage(staticB, "./image/Barrier_static.png");
     getimage(moveB, "./image/Barrier_move.png");

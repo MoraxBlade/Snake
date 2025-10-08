@@ -268,7 +268,7 @@ void Snake::resetScore() {
 
     // ªÊ÷∆±≥æ∞
 void Snake::drawBackground() const {
-    if (Background != nullptr) {
+    if (Background != nullptr){
         putimage(0, 0, Background);
     }
     else {
