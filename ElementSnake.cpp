@@ -191,52 +191,7 @@ void ElementSnake::handleElementEffect(Type foodType, bool isSpeeding) {
 
 void ElementSnake::move(){
     if (!isAlive) return;
-
-    
-    int oldScore = score; // 记录移动前分数
-
-    // 调用基类移动逻辑
-    Snake::move();
-
-    // 每--分增加or减少障碍物
-    int controlScore = 500;
-    int oldLevel = oldScore / controlScore;
-    int newLevel = score / controlScore;
-
-    if (newLevel != oldLevel) {
-        // 分数提升时增加障碍物
-        if (newLevel > oldLevel) {
-            barrierCount++;
-        }
-        // 分数下降时减少障碍物（最低保留1个）
-        else if (newLevel < oldLevel && barrierCount > 1) {
-            barrierCount--;
-        }
-        // 仅因分数变化更新障碍物
-        generateStaticBarrier();
-        generateMoveBarrier();
-    }
-
-    // 移动障碍物
-    for (auto& b : moveBarriers) {
-        b.move(left, right, up, down, moveStep, nodeSize, staticBarriers);
-    }
-
-    // 定时生成新障碍物
-    clock_t currentTime = clock();
-    if ((currentTime - lastBarrierCreateTime) / CLOCKS_PER_SEC * 1000 > BARRIER_CREATE_INTERVAL) {
-        generateStaticBarrier();
-        generateMoveBarrier();
-        lastBarrierCreateTime = currentTime;
-    }
-
-    // 检查与障碍物碰撞
-    const Point& head = body.front();
-    if (isPositionOverlapWithBarriers(head)) {
-        handleDeath();
-        return;
-    }
-    //检测食物
+    BarrierSnake::move();//调用父类移动逻辑
     ifEaten();
 
 }
