@@ -147,7 +147,7 @@ void BarrierSnake::move() {
     Snake::move();
 
     // 每--分增加障碍物
-    int controlScore = 400;
+    int controlScore = 500;
     if (score / controlScore > oldScore / controlScore) {
         barrierCount++;
         generateStaticBarrier();
