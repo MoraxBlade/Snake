@@ -1,6 +1,10 @@
 #include "ElementSnake.h"
 
 ElementSnake::ElementSnake():BarrierSnake(){
+    //初始化背景
+    EleBackground = newimage();
+    getimage(EleBackground, "./image/EleBackground.jpg");
+
     // 初始化元素食物图像（按Type枚举顺序对应）
     eleFoodImgs[0] = newimage(); // NORMAL
     eleFoodImgs[1] = newimage(); // GOLD
@@ -247,3 +251,14 @@ void ElementSnake::draw() const{
     }
 }
 
+
+// 绘制背景
+void ElementSnake::drawBackground() const {
+    if (EleBackground != nullptr) {
+        putimage(0, 0, EleBackground);
+    }
+    else {
+        setbkcolor(WHITE);
+        cleardevice();
+    }
+}
